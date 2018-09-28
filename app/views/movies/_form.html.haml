@@ -1,0 +1,19 @@
+= form_for @movie do |f|
+  .form-group
+    = f.label :title
+    = f.text_field :title, class: 'form-control'
+
+  .form-group
+    = f.label :director
+    = f.text_field :director, class: 'form-control'
+
+  .form-group
+    = f.label :rating
+    = f.select :rating, ['G','PG','PG-13','R','NC-17'], class: 'form-control'
+
+  .form-group
+    = f.label :release_date
+    = f.date_select :release_date, class: 'form-control'
+
+  .form-group
+    = f.submit 'Update Movie Info', class: 'btn btn-default'
